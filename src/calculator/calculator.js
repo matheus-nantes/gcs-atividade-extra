@@ -6,7 +6,7 @@ function calculate(expression) {
         }
         return result;
     } catch (error) {
-        return error;
+        return 'Error';
     }
 }
 function init() {

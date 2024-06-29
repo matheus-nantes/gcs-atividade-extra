@@ -17,5 +17,5 @@ test('divides 8 / 2 to equal 4', () => {
 });
 
 test('divides 2 / 0 to return Error', () => {
-  expect(calculate('2/0')).toBeInstanceOf(Error);
+  expect(calculate('2/0')).toBe('Error');
 });
