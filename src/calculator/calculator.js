@@ -1,7 +1,7 @@
 function calculate(expression) {
     try {
         const result = eval(expression); 
-        if (result === 'Infinity' || result === -Infinity ) return 'Error';
+        if (result === 'Infinity' || result === -Infinity || isNaN(result)) return 'Error';
         return result;
     } catch {
         return 'Error';
