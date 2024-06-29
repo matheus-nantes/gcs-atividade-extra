@@ -1,13 +1,14 @@
 function calculate(expression) {
     try {
-        const result = eval(expression); 
-        if (result === 'Infinity' || result === -Infinity || isNaN(result)) return 'Error';
+        const result = eval(expression);
+        if (!isFinite(result)) {
+            throw new Error('Divisão por zero');
+        }
         return result;
-    } catch {
+    } catch (error) {
         return 'Error';
     }
 }
-
 function init() {
     const display = document.getElementById('display');
     const buttons = Array.from(document.getElementById('buttons').children);
